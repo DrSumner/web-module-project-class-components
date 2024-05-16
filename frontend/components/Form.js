@@ -1,16 +1,11 @@
 import React from 'react'
 
 export default class Form extends React.Component {
-
-  state = {
-    name: ''
-  }
-
-  
+ 
   
   render() {
 
-    const {onSubmit, onChange, name, hideTodos} = this.props
+    const {onSubmit, onChange, name} = this.props
 
     
     return (
@@ -19,15 +14,14 @@ export default class Form extends React.Component {
           <input 
           onChange={onChange} 
           
-          value={this.state.name}
+          value={name}
           type='text' 
           placeholder='Type todo'>
 
           </input>
 
-          <input type='submit' ></input>
+          <input type='submit'/>
         </form>
-        
       </div>
     )
   }

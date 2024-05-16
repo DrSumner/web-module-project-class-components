@@ -17,10 +17,12 @@ const initialTodos = [
   completed: true},
 ]
 
+const initialValue = {name: ''}
+
 export default class App extends React.Component {
   state = {
     todos: initialTodos,
-    values: {},
+    values: initialValue,
   }
 
   handleClick = evt => { 
@@ -45,9 +47,9 @@ export default class App extends React.Component {
     
     this.setState({
       ...this.state,
-      //values: {...this.state.values, id: getId()},
+      
       todos: this.state.todos.concat(this.state.values),
-      values : {}
+      values : initialValue
     })
     console.log('form Submitted!')
     console.log(this.state.todos)
